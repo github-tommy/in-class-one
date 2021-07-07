@@ -13,9 +13,9 @@ $(function () {
         // Verify the user gave us a real number
         if (!isNaN(num)) {
             // Add our new number to the data array
-            data.push(num);
+            // data.push(num);
             // Use reduce to convert our array of numbers into a single value - the sum of all of the numbers
-            const sum = data.reduce((acc, curr) => acc + curr);
+            const sum = data.map((x) => x + num);
             // Add our new total to the page
             resultSum.text(sum);
             // Reset the input value to an empty string
@@ -23,4 +23,3 @@ $(function () {
         }
     });
 });
-
